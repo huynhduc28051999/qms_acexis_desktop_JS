@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="kiosk-wrapper">
+      <div class="kiosk-nav">
+        <div class="nav-wrapper">
+          <div  class="nav-logo nav-item">
+            <img id="logo-company" src="../assets/images/logo.png" alt="ACEXIS|QMS" width='150px' />
+          </div>
+          <div class='nav-item company-name' id="company-name">
+            ACEXIS | QMS
+          </div>
+          <div class='nav-item'>
+            <a href="/login" class='btn-login'>
+              Đăng nhập
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="kiosk-content">
+        <div class="kiosk--content">
+          <div class="get-num-content">
+            <button type="button" class="btn-get-num" id="kiosk-content">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script defer src="./renderer.js"></script>
+  </body>
+</html>

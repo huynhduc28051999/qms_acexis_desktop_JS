@@ -1,0 +1,15 @@
+<head> 
+  <script>
+    const ipcRenderer = require("electron").ipcRenderer
+
+    ipcRenderer.on("print", (event, content) => {
+      document.body.innerHTML = content;
+
+      ipcRenderer.send("readyToPrint")
+    });
+  </script>
+</head>
+
+<body style="font-size: 16px; size: a5">
+  
+</body>
