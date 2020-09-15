@@ -20,9 +20,10 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/getNum/index.html`)
   // mainWindow.loadURL('https://qmstest.digihcs.com/')
-
+  mainWindow.webContents.setWebRTCIPHandlingPolicy('default_public_and_private_interfaces')
+  mainWindow.setKiosk(true)
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
   mainWindow.on('closed', function () {
     mainWindow = null
   })
